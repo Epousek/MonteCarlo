@@ -17,7 +17,7 @@ namespace MonteCarlo
 
         static void Calculate()
         {
-            OneVariableFunction f = TestFunction;
+            OneVariableFunction f = AnotherFunction;
             double bigSurface = Math.Abs(a-b)*maxY;
             double smallSurface;
             double x;
@@ -48,6 +48,11 @@ namespace MonteCarlo
         static double TestFunction(double x)
         {
             return Math.Pow(2, x);
+        }
+
+        static double AnotherFunction(double x)
+        {
+            return Math.Pow(1.5, x);
         }
     }
 
